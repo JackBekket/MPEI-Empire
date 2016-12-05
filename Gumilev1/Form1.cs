@@ -85,8 +85,7 @@ namespace Gumilev1
             double ymin = -5;
             double ymax = 5;
 
-
-            /*
+        /*
             //Двойной
             // Заполняем список точек
             for (double x = xmin; x <= xmax; x += 0.01)
