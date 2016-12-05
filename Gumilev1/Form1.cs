@@ -55,85 +55,12 @@ namespace Gumilev1
         }
 
 
-        //как пример
-        double c1(double m, double v, double k, double t)
-        {
-            return (m / v * Math.Exp(-k * t));
-        }
-
-        double c2(double q, double k, double v, double t)
-        {
-            return (q / k / v * (1 - Math.Exp(-k * t)));
-        }
-
-        double c3(double m, double q, double v, double k, double t)
-        {
-            return (q / k / v + (m / v - q / k / v) * Math.Exp(-k * t));
-        }
+      
 
 
         //функция рисования ГРАФИКА
 
-        //пример
-        void DrawGraph1(double m, double v, double k1, double k2, double n)
-        {
-            // Получим панель для рисования
-            GraphPane pane = zedGraphControl1.GraphPane;
-
-            pane.XAxis.Title.Text = "t, Время";
-            pane.YAxis.Title.Text = "c, Концентрация";
-            pane.Title.Text = "Закон изменения концентрации лекарства";
-
-            // Очистим компонент
-            pane.CurveList.Clear();
-
-            // Создадим список точек
-            PointPairList tr_list = new PointPairList();
-            PointPairList tr_list2 = new PointPairList();
-            PointPairList tr_list3 = new PointPairList();
-
-            double xmin = 0;
-            double xmax = 10;
-
-            // Заполняем список точек
-            for (double x = xmin; x <= xmax; x += 0.01)
-            {
-                // добавим в список точку
-                tr_list.Add(x, c1(m, v, k1, x));
-            }
-
-            // Заполняем список точек
-            for (double x = xmin; x <= xmax; x += 0.01)
-            {
-                // добавим в список точку
-                tr_list2.Add(x, c1(m, v, k2, x));
-            }
-
-            for (double x = xmin; x <= xmax; x += 0.01)
-            {
-                tr_list3.Add(x, n);
-            }
-
-            // Создадим кривую 
-            // которая будет рисоваться голубым цветом (Color.Blue),
-            // Опорные точки выделяться не будут (SymbolType.None)
-            LineItem myCurve1 = pane.AddCurve("Препарат с коэффициентом выведения k1", tr_list, Color.Blue, SymbolType.None);
-            LineItem myCurve2 = pane.AddCurve("Препарат с коэффициентом выведения k2", tr_list2, Color.Green, SymbolType.None);
-            LineItem myCurve3 = pane.AddCurve("Минимально допустимый уровень лекарства", tr_list3, Color.Red, SymbolType.None);
-
-            // Включим отображение сетки
-            pane.XAxis.MajorGrid.IsVisible = true;
-            pane.YAxis.MajorGrid.IsVisible = true;
-
-            // Вызываем метод AxisChange (), чтобы обновить данные об осях. 
-            // В противном случае на рисунке будет показана только часть графика, 
-            // которая умещается в интервалы по осям, установленные по умолчанию
-            zedGraphControl1.AxisChange();
-
-            // Обновляем график
-            zedGraphControl1.Invalidate();
-        }
-
+     
         //задача
         void DrawGraph11(double a, double x1, double y1, double l1, double l2, double k1, double k2 )
         {
@@ -150,24 +77,58 @@ namespace Gumilev1
             // Создадим список точек
             PointPairList tr_list = new PointPairList();
             PointPairList tr_list2 = new PointPairList();
-            PointPairList tr_list3 = new PointPairList();
+     //       PointPairList tr_list3 = new PointPairList();
 
             double xmin = 0;
             double xmax = 10;
 
+            double ymin = 0;
+            double ymax = 10;
+
+
+
+
+            /*
+            // Заполняем список точек
+            for (double x = xmin; x <= xmax; x += 0.01)
+            {
+                for (double y = ymin; y <= ymax; y += 0.01)
+                {
+
+                // добавим в список точку
+                tr_list.Add(x, o1(a, x, l1, y, k1));
+                tr_list2.Add(y, o2(a, x, l2, y, k2));
+                }
+            }
+            */
+         
+
+
+            
             // Заполняем список точек
             for (double x = xmin; x <= xmax; x += 0.01)
             {
                 // добавим в список точку
-                tr_list.Add(x,o1(a, x, l1, y1, k1));
+            
+                  tr_list2.Add(x, o2(a, y1, l2, x, k2));
+
+                //orig
+           //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
             }
 
             // Заполняем список точек
-            for (double x = xmin; x <= xmax; x += 0.01)
+            for (double y = ymin; y <= ymax; y += 0.01)
             {
                 // добавим в список точку
-                tr_list2.Add(x, o2(a,x1,l2,x,k2));
+        
+                tr_list.Add(y, o1(a, x1, l1, y, k1));
+
+                //orig
+            //    tr_list2.Add(y, o2(a,x1,l2,y1,k2));
             }
+            
+
+
 
             /*
             for (double x = xmin; x <= xmax; x += 0.01)
