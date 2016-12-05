@@ -79,19 +79,45 @@ namespace Gumilev1
             PointPairList tr_list2 = new PointPairList();
      //       PointPairList tr_list3 = new PointPairList();
 
-            double xmin = 0;
-            double xmax = 10;
+            double xmin = -5;
+            double xmax = 5;
 
-            double ymin = 0;
-            double ymax = 10;
+            double ymin = -5;
+            double ymax = 5;
 
 
+            /*
+            //Двойной
+            // Заполняем список точек
+            for (double x = xmin; x <= xmax; x += 0.01)
+            {
+                for (double y = ymin; y <= ymax; y += 0.01)
+                {
+                    // добавим в список точку
+
+                    //  tr_list2.Add(x, o2(a, x, l2, y1, k2));
+                    tr_list.Add(x, o1(a, x, l1, y, k1));
+
+                    tr_list2.Add(y, o2(a, x, l2, y, k2));
+                    //orig
+                    //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
+                    //    tr_list2.Add(y, o2(a,x1,l2,y1,k2));
+                }
+            }
+            */
+          
+
+
+
+            
             // Заполняем список точек
             for (double x = xmin; x <= xmax; x += 0.01)
             {
                 // добавим в список точку
             
-                  tr_list2.Add(x, o2(a, x, l2, y1, k2));
+                //  tr_list2.Add(x, o2(a, x, l2, y1, k2));
+                tr_list.Add(x, o1(a, x1, l1, x, k1));
+
 
                 //orig
            //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
@@ -103,7 +129,8 @@ namespace Gumilev1
             {
                 // добавим в список точку
         
-                tr_list.Add(y, o1(a, x1, l1, y, k1));
+             //   tr_list.Add(y, o1(a, x1, l1, y, k1));
+                tr_list2.Add(y, o2(a, y, l2, y1, k2));
 
                 //orig
                 //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
