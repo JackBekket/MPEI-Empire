@@ -129,7 +129,7 @@ namespace Gumilev1
                 // добавим в список точку
         
              //   tr_list.Add(y, o1(a, x1, l1, y, k1));
-                tr_list2.Add(y, o2(a, y, l2, y1, k2));
+                tr_list2.Add(o2(a, y, l2, y1, k2),y);
 
                 //orig
                 //     tr_list.Add(x, o1(a, x1, l1, y1, k1));
