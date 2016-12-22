@@ -16,8 +16,10 @@ namespace Gumilev1
         public Form1()
         {
             InitializeComponent();
+         //   public TheVal1;
         }
 
+        public double TheVal;
 
         // Объяснение задачи и переменных
         //
@@ -64,6 +66,17 @@ namespace Gumilev1
         //задача
         void DrawGraph11(double a, double x1, double y1, double l1, double l2, double k1, double k2 )
         {
+
+            //При каждом скролле любого бегунка вызывается функция перерисовки графа, поэтому 
+            //будет рационально сначала впихнуть сюда продукционные правила
+            //вместо того, что бы прописывать их отдельно для каждого бегунка
+            //Выполнил Пономарев С.А.
+
+            //Правила
+
+
+
+
             // Получим панель для рисования
             GraphPane pane = zedGraphControl1.GraphPane;
 
@@ -165,6 +178,10 @@ namespace Gumilev1
 
             // Обновляем график
             zedGraphControl1.Invalidate();
+
+
+
+
         }
 
 
@@ -228,6 +245,16 @@ namespace Gumilev1
             double a = Convert.ToDouble(trackBar1.Value);
             groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
             //правила если-то
+
+
+            // образец функции убывания/увеличивания значения трекбара!!!
+            /*
+            if (a < TheVal)
+                label1.Text = "a убывает";
+            if (a > TheVal)
+                label1.Text = "a растет";
+            */
+
 
             double x1 = Convert.ToDouble(trackBar2.Value);
           //  groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
@@ -455,6 +482,11 @@ namespace Gumilev1
             //первый граф
             // DrawGraph11
             DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+             TheVal = Convert.ToDouble(trackBar1.Value);
         }
 
         
