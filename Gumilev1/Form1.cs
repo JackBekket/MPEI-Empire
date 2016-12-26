@@ -630,6 +630,46 @@ namespace Gumilev1
             Valx2 = Convert.ToDouble(trackBar3.Value);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 1;
+            trackBar2.Value = 1;
+            trackBar3.Value = 1;
+            trackBar4.Value = 2;
+            trackBar5.Value = 1;
+            trackBar6.Value = 2;
+            trackBar7.Value = 1;
+
+            double a = Convert.ToDouble(trackBar1.Value);
+            groupBox1.Text = "Пассионарная напряженность= " + a.ToString();
+
+            double x1 = Convert.ToDouble(trackBar2.Value);
+            groupBox2.Text = "Базовая сложность структуры государства= " + x1.ToString();
+
+            double y1 = Convert.ToDouble(trackBar3.Value);
+            groupBox3.Text = "Базовая сложность экономической структуры= " + y1.ToString();
+
+            double l1 = Convert.ToDouble(trackBar4.Value);
+            groupBox4.Text = "Лимит вливаний в гос-структуру= " + l1.ToString();
+
+            double k1 = Convert.ToDouble(trackBar5.Value);
+            groupBox5.Text = "Коэффицент вливания капитала в государство " + k1.ToString();
+
+            double l2 = Convert.ToDouble(trackBar6.Value);
+            groupBox6.Text = "Лимит вливаний в экономику= " + l2.ToString();
+
+            double k2 = Convert.ToDouble(trackBar7.Value);
+            groupBox7.Text = "Коэффицент вливания капитала в экономику= " + k2.ToString();
+
+            //Отрисовываем графы
+            //первый граф
+            // DrawGraph11
+            DrawGraph11(a, x1, y1, l1, l2, k1, k2);
+
+            label3.Text = "Текст примера";
+
+        }
+
         
 
 

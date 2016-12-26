@@ -50,6 +50,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
@@ -76,11 +78,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(722, 695);
+            this.tabControl1.Size = new System.Drawing.Size(829, 695);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.groupBox7);
             this.tabPage1.Controls.Add(this.groupBox6);
@@ -94,7 +98,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(714, 669);
+            this.tabPage1.Size = new System.Drawing.Size(821, 669);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Модель";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -122,7 +126,7 @@
             this.groupBox7.Controls.Add(this.trackBar7);
             this.groupBox7.Location = new System.Drawing.Point(410, 452);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(282, 54);
+            this.groupBox7.Size = new System.Drawing.Size(237, 54);
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "groupBox7";
@@ -141,7 +145,7 @@
             this.groupBox6.Controls.Add(this.trackBar6);
             this.groupBox6.Location = new System.Drawing.Point(410, 390);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(282, 54);
+            this.groupBox6.Size = new System.Drawing.Size(237, 54);
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "groupBox6";
@@ -168,7 +172,7 @@
             this.groupBox5.Controls.Add(this.trackBar5);
             this.groupBox5.Location = new System.Drawing.Point(410, 324);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(282, 58);
+            this.groupBox5.Size = new System.Drawing.Size(237, 58);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
@@ -197,7 +201,7 @@
             this.groupBox3.Controls.Add(this.trackBar3);
             this.groupBox3.Location = new System.Drawing.Point(410, 167);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(282, 66);
+            this.groupBox3.Size = new System.Drawing.Size(237, 66);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
@@ -217,7 +221,7 @@
             this.groupBox2.Controls.Add(this.trackBar2);
             this.groupBox2.Location = new System.Drawing.Point(410, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 74);
+            this.groupBox2.Size = new System.Drawing.Size(237, 74);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -233,7 +237,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(382, 481);
+            this.zedGraphControl1.Size = new System.Drawing.Size(363, 481);
             this.zedGraphControl1.TabIndex = 11;
             // 
             // trackBar1
@@ -251,7 +255,7 @@
             this.groupBox4.Controls.Add(this.trackBar4);
             this.groupBox4.Location = new System.Drawing.Point(410, 241);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(282, 75);
+            this.groupBox4.Size = new System.Drawing.Size(237, 75);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "groupBox4";
@@ -261,7 +265,7 @@
             this.groupBox1.Controls.Add(this.trackBar1);
             this.groupBox1.Location = new System.Drawing.Point(410, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 69);
+            this.groupBox1.Size = new System.Drawing.Size(237, 69);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -284,11 +288,29 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "label3";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(43, 517);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Пример";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(667, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 464);
+            this.label2.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 710);
+            this.ClientSize = new System.Drawing.Size(871, 710);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Empire";
@@ -343,6 +365,8 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
 
     }
 }
