@@ -672,7 +672,7 @@ namespace Gumilev1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0.0;2.5,0,8")
+            if (textBox1.Text == "0.0;2.5,0.8")
                 MessageBox.Show("Правильный ответ!  ");
             else
                 MessageBox.Show("Неправильный ответ!, правильный ответ '0.0;2.5,0.8' ");
