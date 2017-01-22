@@ -55,7 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -327,7 +326,6 @@
             // 
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -339,7 +337,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(236, 114);
+            this.button2.Location = new System.Drawing.Point(304, 223);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 3;
@@ -347,17 +345,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(120, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(35, 118);
+            this.label5.Location = new System.Drawing.Point(20, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 1;
@@ -368,9 +359,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(34, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 65);
+            this.label4.Size = new System.Drawing.Size(637, 188);
             this.label4.TabIndex = 0;
-            this.label4.Text = "В каких двух точках будет пересечение кривых если x0,y0=2; l1,l2=2;k1,k2=2,A=0?";
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // panel1
             // 
@@ -385,10 +376,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Да",
-            "Нет",
-            "не знаю"});
-            this.comboBox1.Location = new System.Drawing.Point(120, 197);
+            "Развитие гос.структур будет уменьшаться\t",
+            "Вероятность позитивного исход развития будет уменьшаться"});
+            this.comboBox1.Location = new System.Drawing.Point(169, 221);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
@@ -430,7 +420,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -463,7 +452,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
