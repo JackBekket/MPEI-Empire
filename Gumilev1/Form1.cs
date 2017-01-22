@@ -17,8 +17,10 @@ namespace Gumilev1
         {
             InitializeComponent();
          //   public TheVal1;
+         //   public sl1;
         }
 
+        public int sl1;
         public double TheVal;
         public double Valx1;
         public double Valx2;
@@ -726,7 +728,8 @@ namespace Gumilev1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0.0;2.5,0.8")
+           // if (textBox1.Text == "0.0;2.5,0.8")
+                if(sl1 == 1)
                 MessageBox.Show("Правильный ответ!  ");
             else
                 MessageBox.Show("Неправильный ответ!, правильный ответ '0.0;2.5,0.8' ");
@@ -734,8 +737,12 @@ namespace Gumilev1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedState = comboBox1.SelectedItem.ToString();
-            MessageBox.Show(selectedState);
+           // string selectedState = comboBox1.SelectedItem.ToString();
+          //  MessageBox.Show(selectedState);
+          //  string selectedState = comboBox1.SelectedIndex.ToString();
+            int selectedState = comboBox1.SelectedIndex;
+            sl1 = selectedState;
+        //    MessageBox.Show(selectedState);
         }
 
         
