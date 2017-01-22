@@ -283,6 +283,7 @@ namespace Gumilev1
                 label1.Text = "При положительных значениях A наблюдается склонность к развитию процессов";
             if (a < 0)
                 label1.Text = "При отрицательных значениях наблюдается склонность к разложению";
+            label1.ForeColor = System.Drawing.Color.Red;
         
             /*
             else
