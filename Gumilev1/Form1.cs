@@ -230,7 +230,7 @@ namespace Gumilev1
             //label2.Text = "Выполнил Пономарев С.А.";
 
             //Функции, что бы сверить рез-ты.
-            label3.Text = "a * x1 + l1 * y1 - k1 * y1^2 \n a * y1 - l2 * x1 + k2 * x1^2";
+          //  label3.Text = "a * x1 + l1 * y1 - k1 * y1^2 \n a * y1 - l2 * x1 + k2 * x1^2";
 
 
         }
