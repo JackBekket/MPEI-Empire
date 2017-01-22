@@ -280,11 +280,17 @@ namespace Gumilev1
 
 
             if (a > 0)
+            {
                 label1.Text = "При положительных значениях A наблюдается склонность к развитию процессов";
+                // label1.ResetForeColor();
+                label1.ForeColor = System.Drawing.Color.Green;
+            }
             if (a < 0)
+            {
                 label1.Text = "При отрицательных значениях наблюдается склонность к разложению";
-            label1.ForeColor = System.Drawing.Color.Red;
-        
+                //  label1.ResetForeColor();
+                label1.ForeColor = System.Drawing.Color.Red;
+            }
             /*
             else
                 label1.Text = "";
