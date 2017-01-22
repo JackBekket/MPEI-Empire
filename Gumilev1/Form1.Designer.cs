@@ -337,7 +337,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(304, 223);
+            this.button2.Location = new System.Drawing.Point(23, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 3;
@@ -380,7 +380,7 @@
             "Вероятность позитивного исход развития будет уменьшаться"});
             this.comboBox1.Location = new System.Drawing.Point(169, 221);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(426, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
