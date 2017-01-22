@@ -732,6 +732,12 @@ namespace Gumilev1
                 MessageBox.Show("Неправильный ответ!, правильный ответ '0.0;2.5,0.8' ");
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedState = comboBox1.SelectedItem.ToString();
+            MessageBox.Show(selectedState);
+        }
+
         
 
 
